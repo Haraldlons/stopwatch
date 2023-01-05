@@ -1,6 +1,6 @@
 {
   "name": "@haraldlons/stopwatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple stopwatch to print out a the time between start and stop",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
