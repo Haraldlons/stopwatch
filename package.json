@@ -1,0 +1,47 @@
+{
+  "name": "@haraldlons/stopwatch",
+  "version": "1.0.0",
+  "description": "A simple stopwatch to print out a the time between start and stop",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haraldlons/stopwatch.git"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "stopwatch",
+    "console log"
+  ],
+  "author": "Harald Lønsethagen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haraldlons/stopwatch/issues"
+  },
+  "homepage": "https://github.com/Haraldlons/stopwatch#readme",
+  "devDependencies": {
+    "@types/jest": "^29.2.5",
+    "jest": "^29.3.1",
+    "prettier": "^2.8.1",
+    "ts-jest": "^29.0.3",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "marky": "^1.2.5"
+  }
+}
